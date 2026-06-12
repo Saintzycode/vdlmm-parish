@@ -38,7 +38,7 @@
           </svg>
           </div>
           <h4 class="font-display text-[#1E3A5F] text-sm font-semibold mb-2">Email</h4>
-          <p class="text-sm text-[#5A7A9A] leading-relaxed">parish@vdlmm.ph</p>
+          <p class="text-sm text-[#5A7A9A] leading-relaxed">vidmmchurch@gmail.com</p>
           <p class="text-xs text-[#5A7A9A] mt-1">We reply promptly</p>
         </div>
 
