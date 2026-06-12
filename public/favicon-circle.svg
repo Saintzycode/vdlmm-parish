@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="256" cy="256" r="256" />
+    </clipPath>
+  </defs>
+  <rect width="512" height="512" fill="transparent" />
+  <image href="/Official%20Logo.jpg" width="512" height="512" clip-path="url(#circle-clip)" preserveAspectRatio="xMidYMid slice" />
+</svg>

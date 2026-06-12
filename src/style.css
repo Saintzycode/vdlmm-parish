@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body-serif: 'EB Garamond', Georgia, serif;
+  --font-sans: 'Source Sans 3', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); }
+.font-display { font-family: var(--font-display); }
+.font-body-serif { font-family: var(--font-body-serif); }
