@@ -61,7 +61,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div>
             <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#C8A84B] mb-2">Parish Office Hours</p>
-            <p class="text-sm text-[#5A7A9A] leading-relaxed">Sunday: 9:00 AM – 12:00 NN<br>Monday & Wednesday – Saturday: 8:00 AM – 5:00 PM</p>
+            <p class="text-sm text-[#5A7A9A] leading-relaxed">Sunday: 9:00 AM – 12:00 NN<br>Monday & Wednesday – Saturday: 9:00 AM – 5:00 PM</p>
           </div>
           <div>
             <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#C8A84B] mb-2">Tuesday</p>
