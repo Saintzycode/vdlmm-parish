@@ -72,7 +72,7 @@ const locationInfo = [
   {
     icon: '🏛️',
     label: 'Parish Office',
-    value: 'Tuesday–Saturday: 8:00 AM – 5:00 PM<br>Sunday: 8:00 AM – 12:00 PM<br><span class="text-red-600 font-semibold">Monday: Closed</span>'
+    value: 'Monday & Wed-Sat: 8:00 AM – 5:00 PM<br>Sunday: 9:00 AM – 12:00 NN<br><span class="text-red-600 font-semibold">Tuesday: Closed</span>'
   },
   {
     icon: '⛪',

@@ -33,9 +33,8 @@
         <h4 class="font-semibold text-white mb-3">Contact</h4>
         <address class="not-italic text-sm text-[#B8D8F0]/60 space-y-2">
           <div>Malabago, Mangaldan, Pangasinan, Philippines</div>
-          <div>Phone: <a class="text-[#E4C876] hover:underline" href="tel:+63">(local)</a></div>
-          <div>Email: <a class="text-[#E4C876] hover:underline" href="mailto:info@example.com">vidmmchurch@gmail.com
-</a></div>
+          <div>Phone: <a class="text-[#E4C876] hover:underline" href="tel:+63">(0924 137 0501)</a></div>
+          <div>Email: <a class="text-[#E4C876] hover:underline" href="mailto:info@example.com">vmmparish@gmail.com</a></div>
         </address>
 
         <div class="mt-4">
