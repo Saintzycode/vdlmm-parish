@@ -5,7 +5,6 @@ import WelcomeSection from '../components/WelcomeSection.vue'
 import MassSchedule from '../components/MassSchedule.vue'
 import Announcements from '../components/Announcements.vue'
 import AboutSection from '../components/AboutSection.vue'
-import ParishCouncil from '../components/ParishCouncil.vue'
 import LocationSection from '../components/LocationSection.vue'
 import ContactSection from '../components/ContactSection.vue'
 import FooterSection from '../components/FooterSection.vue'
@@ -17,7 +16,6 @@ import FooterSection from '../components/FooterSection.vue'
     <HeroSection />
     <WelcomeSection />
     <AboutSection />
-    <ParishCouncil />
     <Announcements />
     <MassSchedule />
     <LocationSection />

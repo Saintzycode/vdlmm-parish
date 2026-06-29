@@ -44,7 +44,12 @@ function openAddForm() {
 
 function openEditForm(a) {
   editingId.value = a.id
-  form.value = { title: a.title, content: a.content, tag: a.tag, date: a.date }
+  form.value = {
+    title: a.title,
+    content: a.content,
+    tag: a.tag,
+    date: a.date
+  }
   showFormModal.value = true
 }
 
@@ -123,20 +128,30 @@ onMounted(fetchAnnouncements)
       <div v-else-if="announcements.length === 0" class="text-center py-16 text-[#5A7A9A] italic text-sm">No announcements at this time. Check back soon.</div>
 
       <!-- GRID -->
-      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div v-for="a in announcements" :key="a.id" class="bg-[#FAFBFF] border border-[#E8F2FA] rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-200">
-          <div class="h-1.5 w-full" :class="tagMap[a.tag]?.bar || tagMap.blue.bar"></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 mb-3 flex-wrap">
-              <span class="text-[0.62rem] font-bold tracking-[0.15em] uppercase px-2 py-1 rounded" :class="[tagMap[a.tag]?.bg || tagMap.blue.bg, tagMap[a.tag]?.text || tagMap.blue.text]">{{ tagMap[a.tag]?.label || 'Parish News' }}</span>
-              <span class="text-[0.72rem] text-[#5A7A9A] ml-auto">{{ a.date }}</span>
+      <div v-else class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+        <div v-for="a in announcements" :key="a.id" class="bg-white border border-[#E8F2FA] rounded-[32px] shadow-xl hover:-translate-y-1 transition-transform duration-200 overflow-hidden">
+          <div class="relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-2" :class="tagMap[a.tag]?.bar || tagMap.blue.bar"></div>
+            <div class="p-8 pt-10">
+              <div class="flex items-start justify-between gap-3">
+                <span class="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[0.68rem] font-bold uppercase tracking-[0.14em]" :class="[tagMap[a.tag]?.bg || tagMap.blue.bg, tagMap[a.tag]?.text || tagMap.blue.text]">
+                  <span class="h-2.5 w-2.5 rounded-full" :class="tagMap[a.tag]?.bar || tagMap.blue.bar"></span>
+                  {{ tagMap[a.tag]?.label || 'Parish News' }}
+                </span>
+                <span class="text-[0.74rem] text-[#5A7A9A]">{{ a.date }}</span>
+              </div>
+              <h3 class="font-display text-[#1E3A5F] text-3xl font-semibold mt-4 mb-4 leading-tight">{{ a.title }}</h3>
+              <p class="text-base text-[#475569] leading-7 max-h-[14rem] overflow-hidden">{{ a.content }}</p>
             </div>
-            <h3 class="font-display text-[#1E3A5F] text-base font-semibold mb-2 leading-snug">{{ a.title }}</h3>
-            <p class="text-sm text-[#5A7A9A] leading-relaxed">{{ a.content }}</p>
           </div>
-          <div v-if="isAdmin" class="px-5 pb-4 flex gap-2">
-            <button @click="openEditForm(a)" class="text-xs font-bold px-3 py-1.5 rounded bg-[#E8F2FA] text-[#2E5F9A] hover:bg-[#4A7FBF] hover:text-white transition-colors duration-200">✏ Edit</button>
-            <button @click="confirmDelete(a.id)" class="text-xs font-bold px-3 py-1.5 rounded bg-red-50 text-red-600 hover:bg-red-600 hover:text-white transition-colors duration-200">🗑 Delete</button>
+          <div class="border-t border-[#E8F2FA] px-6 py-4">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <span class="text-xs uppercase tracking-[0.22em] text-[#94A3B8]">Announcement</span>
+              <div class="flex flex-wrap gap-2">
+                <button v-if="isAdmin" @click="openEditForm(a)" class="text-xs font-semibold px-3 py-2 rounded-full bg-[#E8F2FA] text-[#2E5F9A] hover:bg-[#4A7FBF] hover:text-white transition-colors duration-200">✏ Edit</button>
+                <button v-if="isAdmin" @click="confirmDelete(a.id)" class="text-xs font-semibold px-3 py-2 rounded-full bg-red-50 text-red-600 hover:bg-red-600 hover:text-white transition-colors duration-200">🗑 Delete</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
