@@ -86,13 +86,13 @@ const featuredPhoto = ref('')
 
 const council = [
   { title: 'Youth Coordinator', name: 'John Louise Gorospe', photo: '/images/john-louise-gorospe.jpg' },
-  { title: 'Youth Leader', name: 'Aldem Estor', photo: '/images/aldem-estor.jpg' },
+  { title: 'Youth Leader', name: 'Aldem Estor', photo: '/images/aldem.jpg' },
   { title: 'Secretary', name: 'Ferdinand Ola', photo: '/images/ferdinand-ola.jpg' },
   { title: 'Treasurer', name: 'Ysabelle Tandingan', photo: '/images/ysabelle-tandingan.jpg' },
-  { title: 'Auditor', name: 'Mico Biasaga', photo: '/images/mico-biasaga.jpg' },
+  { title: 'Auditor', name: 'Mico Biasaga', photo: '/images/mico.jpg' },
   { title: 'Faith Formation', name: 'Jerico Prado', photo: '/images/jerico-prado.jpg' },
   { title: 'Divine Worship', name: 'Shaira Quiroz', photo: '/images/shaira-quiroz.jpg' },
-  { title: 'Social Communication', name: 'Eline Estor', photo: '/images/eline-estor.jpg' },
+  { title: 'Social Communication', name: 'Eline Estor', photo: '/images/eline.png' },
   { title: 'Social Action & Engagement', name: 'Ivan Mostoles', photo: '/images/ivan-mostoles.jpg' },
   { title: 'Fellowship & Animation', name: 'Carlos Calimlim', photo: '/images/carlos-calimlim.jpg' },
 ]
