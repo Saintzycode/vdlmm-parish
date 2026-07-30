@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap');
 @import "tailwindcss";
 
-:root {
+@theme {
+  --color-parish-navy: #0D2340;
+  --color-parish-navy-soft: #1E3A5F;
+  --color-parish-blue: #4A7FBF;
+  --color-parish-blue-soft: #7FB3E0;
+  --color-parish-blue-pale: #B8D8F0;
+  --color-parish-blue-bg: #E8F2FA;
+  --color-parish-blue-bg-2: #FAFBFF;
+  --color-parish-blue-bg-3: #F6F9FC;
+  --color-parish-gold: #C8A84B;
+  --color-parish-gold-soft: #E4C876;
+  --color-parish-gold-bg: #FBF5E0;
+  --color-parish-text: #5A7A9A;
+  --color-parish-text-strong: #1A2E45;
+
   --font-display: 'Cinzel', Georgia, serif;
   --font-body-serif: 'EB Garamond', Georgia, serif;
   --font-sans: 'Source Sans 3', sans-serif;

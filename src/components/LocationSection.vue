@@ -4,13 +4,13 @@
 
       <!-- HEADER -->
       <div class="mb-10">
-        <p class="text-[0.68rem] font-bold tracking-[0.4em] uppercase text-[#C8A84B] mb-2">
+        <p class="text-[0.68rem] font-bold tracking-[0.4em] uppercase text-parish-gold mb-2">
           Visit Us
         </p>
-        <h2 class="font-display font-semibold text-[#1E3A5F] leading-tight text-2xl sm:text-3xl md:text-4xl">
-          Find Our <em class="italic text-[#4A7FBF]">Parish</em>
+        <h2 class="font-display font-semibold text-parish-navy-soft leading-tight text-2xl sm:text-3xl md:text-4xl">
+          Find Our <em class="italic text-parish-blue">Parish</em>
         </h2>
-        <div class="w-12 h-0.5 bg-gradient-to-r from-[#C8A84B] to-[#E4C876] mt-4"></div>
+        <div class="w-12 h-0.5 bg-gradient-to-r from-parish-gold to-parish-gold-soft mt-4"></div>
       </div>
 
       <!-- GRID -->
@@ -19,33 +19,35 @@
         <!-- LEFT INFO -->
         <div class="flex flex-col gap-5">
           <div v-for="item in locationInfo" :key="item.label" class="flex gap-4 items-start">
-            <div class="w-11 h-11 rounded-lg bg-[#E8F2FA] flex items-center justify-center flex-shrink-0 text-lg">
-              {{ item.icon }}
+            <div class="w-11 h-11 rounded-lg bg-parish-blue-bg flex items-center justify-center flex-shrink-0">
+              <component :is="item.icon" :size="22" weight="Outline" class="text-parish-blue" />
             </div>
             <div>
-              <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#C8A84B] mb-1">
+              <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-parish-gold mb-1">
                 {{ item.label }}
               </p>
-              <p class="text-sm text-[#1A2E45] leading-relaxed" v-html="item.value"></p>
+              <div class="text-sm text-parish-text-strong leading-relaxed">
+                <p v-for="(line, i) in item.lines" :key="i" :class="line.class">{{ line.text }}</p>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- RIGHT MAP -->
-        <div class="relative rounded-xl overflow-hidden border border-[#E8F2FA] h-[320px] sm:h-[380px] bg-[#E8F2FA]">
+        <div class="relative rounded-xl overflow-hidden border border-parish-blue-bg h-[320px] sm:h-[380px] bg-parish-blue-bg">
           <div
             class="absolute inset-0 opacity-20"
             style="background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, #7FB3E0 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, #7FB3E0 40px);"
           ></div>
           <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
-            <span class="text-5xl drop-shadow-lg">📍</span>
-            <p class="font-display text-[#1E3A5F] text-sm text-center px-6 leading-snug">
+            <Pin :size="48" weight="Outline" class="text-parish-blue drop-shadow-lg" />
+            <p class="font-display text-parish-navy-soft text-sm text-center px-6 leading-snug">
               Virgen de la Medalla Milagrosa Parish
             </p>
-            <p class="text-[#5A7A9A] text-xs font-sans">Malabago, Mangaldan, Pangasinan</p>
+            <p class="text-parish-text text-xs font-sans">Malabago, Mangaldan, Pangasinan</p>
             <button
               @click="openMap"
-              class="px-5 py-2.5 bg-[#4A7FBF] text-white text-xs font-bold tracking-widest uppercase rounded-lg hover:bg-[#2E5F9A] transition-colors duration-200"
+              class="px-5 py-2.5 bg-parish-blue text-white text-xs font-bold tracking-widest uppercase rounded-lg hover:bg-parish-navy-soft transition-colors duration-200"
             >
               Open in Google Maps
             </button>
@@ -58,26 +60,40 @@
 </template>
 
 <script setup>
+import { Pin, Calendar, Building, Map } from 'reicon-vue'
+
 const locationInfo = [
   {
-    icon: '📍',
+    icon: Pin,
     label: 'Address',
-    value: 'Malabago, Mangaldan<br>Pangasinan, 2432 Philippines'
+    lines: [
+      { text: 'Malabago, Mangaldan' },
+      { text: 'Pangasinan, 2432 Philippines' },
+    ],
   },
   {
-    icon: '🕊',
+    icon: Calendar,
     label: 'Daily Mass',
-    value: 'Mon–Sat: 6:15 AM · Mother Parish<br>Sunday: 6:30 AM, 7:00 AM (Anolid), 8:00 AM (Maasin)'
+    lines: [
+      { text: 'Mon–Sat: 6:15 AM · Mother Parish' },
+      { text: 'Sunday: 6:30 AM, 7:00 AM (Anolid), 8:00 AM (Maasin)' },
+    ],
   },
   {
-    icon: '🏛️',
+    icon: Building,
     label: 'Parish Office',
-    value: 'Monday & Wed-Sat: 9:00 AM – 5:00 PM<br>Sunday: 9:00 AM – 12:00 NN<br><span class="text-red-600 font-semibold">Tuesday: Closed</span>'
+    lines: [
+      { text: 'Monday & Wed-Sat: 9:00 AM – 5:00 PM' },
+      { text: 'Sunday: 9:00 AM – 12:00 NN' },
+      { text: 'Tuesday: Closed', class: 'text-red-600 font-semibold' },
+    ],
   },
   {
-    icon: '⛪',
+    icon: Map,
     label: 'Chapels',
-    value: 'Anolid Chapel · Maasin Chapel'
+    lines: [
+      { text: 'Anolid Chapel · Maasin Chapel' },
+    ],
   },
 ]
 

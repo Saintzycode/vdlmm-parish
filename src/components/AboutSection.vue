@@ -1,19 +1,19 @@
 <template>
-  <section id="about" class="bg-[#0D2340] py-16 md:py-24 px-4">
+  <section id="about" class="bg-parish-navy py-16 md:py-24 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
         <!-- LEFT -->
         <div>
-          <p class="text-[0.68rem] font-bold tracking-[0.4em] uppercase text-[#E4C876] mb-2">
+          <p class="text-[0.68rem] font-bold tracking-[0.4em] uppercase text-parish-gold-soft mb-2">
             Our Parish
           </p>
           <h2 class="font-display font-semibold text-white leading-tight mb-4
                      text-2xl sm:text-3xl md:text-4xl">
-            Rooted in <em class="italic text-[#7FB3E0]">Faith</em>,<br>
+            Rooted in <em class="italic text-parish-blue-soft">Faith</em>,<br>
             Grounded in Mary
           </h2>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-[#C8A84B] to-transparent mb-6"></div>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-parish-gold to-transparent mb-6"></div>
 
           <p class="text-white/70 leading-relaxed text-sm sm:text-base mb-4">
             Virgen de la Medalla Milagrosa Parish stands as a pillar of faith in Malabago,
@@ -32,9 +32,9 @@
             <div
               v-for="value in values"
               :key="value.title"
-              class="border-l-2 border-[#C8A84B] pl-4"
+              class="border-l-2 border-parish-gold pl-4"
             >
-              <h4 class="font-display text-[#E4C876] text-sm font-semibold mb-1">
+              <h4 class="font-display text-parish-gold-soft text-sm font-semibold mb-1">
                 {{ value.title }}
               </h4>
               <p class="text-white/50 text-xs leading-relaxed">
@@ -48,7 +48,7 @@
         <div class="flex flex-col gap-5">
 
                   <!-- LOGO -->
-                  <div class="w-44 h-44 md:w-52 md:h-52 mx-auto rounded-full border-2 border-[#C8A84B]/40 bg-[#4A7FBF]/10 flex items-center justify-center overflow-hidden">
+                  <div class="w-44 h-44 md:w-52 md:h-52 mx-auto rounded-full border-2 border-parish-gold/40 bg-parish-blue/10 flex items-center justify-center overflow-hidden">
                     <img :src="logoSrc" alt="parish logo" class="w-full h-full object-cover drop-shadow-2xl" />
                   </div>
 
@@ -59,9 +59,11 @@
               :key="info.label"
               class="flex gap-3 text-sm"
             >
-              <span class="text-[#E4C876] text-base flex-shrink-0 mt-0.5">{{ info.icon }}</span>
+              <span class="text-parish-gold-soft flex-shrink-0 mt-0.5">
+                <component :is="info.icon" :size="20" weight="Outline" />
+              </span>
               <div>
-                <p class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#C8A84B] mb-0.5">
+                <p class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-parish-gold mb-0.5">
                   {{ info.label }}
                 </p>
                 <p class="text-white/60 leading-relaxed text-sm">{{ info.value }}</p>
@@ -76,6 +78,7 @@
 </template>
 
 <script setup>
+import { Building, Globe, Map, MedalStar } from 'reicon-vue'
 import logoImg from '../assets/Official.jpg'
 
 const values = [
@@ -86,10 +89,10 @@ const values = [
 ]
 
 const parishInfo = [
-  { icon: '⛪', label: 'Mother Parish', value: 'Malabago, Mangaldan, Pangasinan, 2432 Philippines' },
-  { icon: '✝', label: 'Diocese', value: 'Archdiocese of Lingayen–Dagupan' },
-  { icon: '📿', label: 'Chapels', value: 'Anolid Chapel · Maasin Chapel' },
-  { icon: '🕊', label: 'Patron', value: 'Virgen de la Medalla Milagrosa (Our Lady of the Miraculous Medal)' },
+  { icon: Building, label: 'Mother Parish', value: 'Malabago, Mangaldan, Pangasinan, 2432 Philippines' },
+  { icon: Globe, label: 'Diocese', value: 'Archdiocese of Lingayen–Dagupan' },
+  { icon: Map, label: 'Chapels', value: 'Anolid Chapel · Maasin Chapel' },
+  { icon: MedalStar, label: 'Patron', value: 'Virgen de la Medalla Milagrosa (Our Lady of the Miraculous Medal)' },
 ]
 
 const logoSrc = logoImg

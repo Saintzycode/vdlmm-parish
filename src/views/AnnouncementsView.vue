@@ -1,11 +1,11 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
-import ParishCouncil from '../components/ParishCouncil.vue'
+import Announcements from '../components/Announcements.vue'
 </script>
 
 <template>
   <div class="bg-parish-blue-bg-2 min-h-screen">
     <NavBar />
-    <ParishCouncil />
+    <Announcements />
   </div>
 </template>

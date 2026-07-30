@@ -1,31 +1,31 @@
 <template>
-  <section id="contact" class="bg-[#E8F2FA] py-16 md:py-24 px-4">
+  <section id="contact" class="bg-parish-blue-bg py-16 md:py-24 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-10">
-        <p class="text-[0.68rem] font-bold tracking-[0.4em] uppercase text-[#C8A84B] mb-2">Get in Touch</p>
-        <h2 class="font-display font-semibold text-[#1E3A5F] leading-tight text-2xl sm:text-3xl md:text-4xl">Contact the <em class="italic text-[#4A7FBF]">Parish</em></h2>
-        <div class="w-12 h-0.5 bg-gradient-to-r from-[#C8A84B] to-[#E4C876] mt-4 mx-auto"></div>
+        <p class="text-[0.68rem] font-bold tracking-[0.4em] uppercase text-parish-gold mb-2">Get in Touch</p>
+        <h2 class="font-display font-semibold text-parish-navy-soft leading-tight text-2xl sm:text-3xl md:text-4xl">Contact the <em class="italic text-parish-blue">Parish</em></h2>
+        <div class="w-12 h-0.5 bg-gradient-to-r from-parish-gold to-parish-gold-soft mt-4 mx-auto"></div>
       </div>
 
       <!-- CONTACT CARDS -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
 
         <!-- PHONE -->
-        <div class="bg-white rounded-xl p-6 text-center border-t-4 border-[#4A7FBF] hover:-translate-y-1 transition-transform duration-200">
+        <div class="bg-white rounded-xl p-6 text-center border-t-4 border-parish-blue hover:-translate-y-1 transition-transform duration-200">
           <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4A7FBF" class="w-10 h-10">
               <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
             </svg>
           </div>
-          <h4 class="font-display text-[#1E3A5F] text-sm font-semibold mb-2">Parish Office</h4>
-          <p class="text-sm text-[#5A7A9A] leading-relaxed">(+63) 924 137 0501</p>
-          <p class="text-xs text-[#5A7A9A] mt-1">Call during office hours</p>
+          <h4 class="font-display text-parish-navy-soft text-sm font-semibold mb-2">Parish Office</h4>
+          <p class="text-sm text-parish-text leading-relaxed">(+63) 924 137 0501</p>
+          <p class="text-xs text-parish-text mt-1">Call during office hours</p>
         </div>
 
         <!-- EMAIL -->
         <div class="bg-white rounded-xl p-6 text-center border-t-4 border-[#EA4335] hover:-translate-y-1 transition-transform duration-200">
           <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 49.4 512 399.42">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 399.42">
             <g fill="none" fill-rule="evenodd">
             <g fill-rule="nonzero">
             <path fill="#4285f4" d="M34.91 448.818h81.454V251L0 163.727V413.91c0 19.287 15.622 34.91 34.91 34.91z"/>
@@ -37,9 +37,9 @@
             </g>
           </svg>
           </div>
-          <h4 class="font-display text-[#1E3A5F] text-sm font-semibold mb-2">Email</h4>
-          <p class="text-sm text-[#5A7A9A] leading-relaxed">vmmparish@gmail.com</p>
-          <p class="text-xs text-[#5A7A9A] mt-1">We reply promptly</p>
+          <h4 class="font-display text-parish-navy-soft text-sm font-semibold mb-2">Email</h4>
+          <p class="text-sm text-parish-text leading-relaxed">vmmparish@gmail.com</p>
+          <p class="text-xs text-parish-text mt-1">We reply promptly</p>
         </div>
 
         <!-- FACEBOOK -->
@@ -49,27 +49,27 @@
               <path fill="#1877F2" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
             </svg>
           </div>
-          <h4 class="font-display text-[#1E3A5F] text-sm font-semibold mb-2">Facebook</h4>
-          <p class="text-sm text-[#5A7A9A] leading-relaxed">Virgen de la Medalla Milagrosa Parish</p>
-          <p class="text-xs text-[#5A7A9A] mt-1">Follow for updates & live streams</p>
+          <h4 class="font-display text-parish-navy-soft text-sm font-semibold mb-2">Facebook</h4>
+          <p class="text-sm text-parish-text leading-relaxed">Virgen de la Medalla Milagrosa Parish</p>
+          <p class="text-xs text-parish-text mt-1">Follow for updates & live streams</p>
         </a>
 
       </div>
 
       <!-- OFFICE HOURS NOTE -->
-      <div class="bg-white rounded-xl p-6 border-l-4 border-[#C8A84B]">
+      <div class="bg-white rounded-xl p-6 border-l-4 border-parish-gold">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div>
-            <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#C8A84B] mb-2">Parish Office Hours</p>
-            <p class="text-sm text-[#5A7A9A] leading-relaxed">Sunday: 9:00 AM – 12:00 NN<br>Monday & Wednesday – Saturday: 9:00 AM – 5:00 PM</p>
+            <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-parish-gold mb-2">Parish Office Hours</p>
+            <p class="text-sm text-parish-text leading-relaxed">Sunday: 9:00 AM – 12:00 NN<br>Monday & Wednesday – Saturday: 9:00 AM – 5:00 PM</p>
           </div>
           <div>
-            <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#C8A84B] mb-2">Tuesday</p>
+            <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-parish-gold mb-2">Tuesday</p>
             <p class="text-sm text-red-600 font-bold">CLOSED</p>
           </div>
           <div>
-            <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#C8A84B] mb-2">Sacramental Requests</p>
-            <p class="text-sm text-[#5A7A9A] leading-relaxed">For Baptism, Marriage, and Confirmation — please visit or call the Parish Office during office hours.</p>
+            <p class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-parish-gold mb-2">Sacramental Requests</p>
+            <p class="text-sm text-parish-text leading-relaxed">For Baptism, Marriage, and Confirmation — please visit or call the Parish Office during office hours.</p>
           </div>
         </div>
       </div>
@@ -77,6 +77,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-</script>

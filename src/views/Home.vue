@@ -11,7 +11,7 @@ import FooterSection from '../components/FooterSection.vue'
 </script>
 
 <template>
-  <div class="bg-[#FAFBFF]">
+  <div class="bg-parish-blue-bg-2">
     <NavBar />
     <HeroSection />
     <WelcomeSection />
